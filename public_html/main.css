@@ -1,0 +1,192 @@
+/*black skin*/
+body{
+    font-family: 'Press Start 2P';
+}
+body.black{
+    background-color: black;
+}
+body.black .inhabitant {
+    background: #7dff1b;
+}
+body.black .control-btn {
+    color: white;
+}
+
+div {
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+ */  
+}
+
+
+.controls{
+    height: 30px;
+}
+.control-btn{
+    border: 1px solid gray;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.content{
+    
+}
+.content .screen{
+    background: #dbffcd;
+    width: 350px;
+    height: 260px;
+    background-image: url("pics/world.png");
+    z-index: 2;
+}
+
+
+.inhabitant {
+    position: absolute;    
+    margin-left: -1px;
+    margin-top: -1px;
+    cursor: pointer;
+    z-index: 2000;
+}
+.inhabitant .body{
+    width: 5px;
+    height: 7px;
+}
+.inhabitant.male .body{
+    /*border: 1px solid #247be2 !important;*/
+    background-image: url("pics/m1.png");
+}
+.inhabitant.female .body{
+    background-image: url("pics/f3.png");
+}
+
+.inhabitant.female.active .body{
+    background-image: url("pics/f2.png");
+}
+.inhabitant.male.active .body{
+    background-image: url("pics/m2.png");
+}
+
+.inhabitant.opaque {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 0px solid red;
+    background: red;
+    opacity: 0.1;
+    border-radius: 20px;
+}
+
+.inhabitant.big {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    margin-top: -2px;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.inhabitant.small {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border: 1px solid red;
+    border-radius: 1px;
+}
+
+
+.inhabitant .name {
+    font-size: 3px;
+    width: 50px;
+    margin-left: -14px;
+    margin-top: -5px;
+}
+
+.bush {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    margin-top: -5px;
+    background-image: url("pics/b4.png");
+    z-index: 1;
+}    
+
+.bush.full{
+    background-image: url("pics/b3.png");
+} 
+
+
+.counter {
+     margin-left: -16px;
+    font-weight: bold;    
+}
+
+
+.screen {
+    float: left;
+}
+
+.info {
+    display: none;
+    width: 145px;
+    height: 233px;
+    float: left;
+    /* border: 1px solid grey; */
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 6px;
+    line-height: 12px;
+    background-image: url(pics/stats.png);
+    z-index: 0;
+    padding-top: 22px;
+    padding-left: 20px;
+    color: white;
+}
+.info b{
+    color: green;    
+}
+.info .name{
+    color: white;
+    text-decoration: underline;
+}
+.ico {
+    position: absolute;
+    width: 10px;
+    height: 12px;
+    margin-left: 110px;
+    overflow: hidden;
+    margin-left: 113px;
+    padding-left: 10px;
+}
+.ico.male {
+    background-image: url(pics/male_ico.png);
+}
+.ico.female{
+    background-image: url(pics/female_ico.png);
+}
+
+.frame {
+    position: absolute;
+    z-index: 1000;
+    background-image: url(pics/frame.png);
+    width: 351px;
+    height: 261px;
+}
+
+.avg-lifespan-bar{
+    position: absolute;
+    margin-left: 542px;
+    bottom: 28px;
+    width: 5px;
+    background-color: green;
+    z-index: 10000;
+}

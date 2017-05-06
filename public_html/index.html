@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Survive Bitch!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="icon" href="pics/icon.ico">
+        <script type="text/javascript" src="jslib/jquery.min.js"></script>
+        <script type="text/javascript" src="params.js"></script>
+        <script type="text/javascript" src="js/names.js"></script>
+        <script type="text/javascript" src="js/suppmath.js"></script>
+        <script type="text/javascript" src="js/genetics.js"></script>
+        <script type="text/javascript" src="js/world.js"></script>
+        <script type="text/javascript" src="js/simulation.js"></script>
+        <script type="text/javascript" src="js/objects/inhabitant.js"></script>
+        <script type="text/javascript" src="js/objects/bush.js"></script>
+        <script type="text/javascript" src="js/infodisplay.js"></script>
+        <script type="text/javascript">
+            $(window).load(() => {                
+                // resize screen to fit world size
+                //$('.screen').width(world.width);
+                //$('.screen').height(world.height);
+                
+                // init simulation (e.g. place inhabitants)
+                simulation.init($('.screen'));
+                //simulation.start();
+                
+                infoDisplay.init($('.info'));
+            });
+        </script>
+    </head>
+    
+    <body class="">
+        <div class="controls">
+            <span class="control-btn" onclick="simulation.start()">|></span>
+            <span class="control-btn" onclick="simulation.fastStart()">|>></span>
+            <span class="control-btn" onclick="simulation.stop()">||</span>
+            year: <span class="tick-counter counter"></span>
+            pops: <span class="population-counter counter"></span>
+        </div>
+        <div class="content">
+            <div class="frame">
+            </div>
+            <div class="screen">
+            </div>
+            <div class="info">
+            </div>
+            <div class="avg-lifespan-bar">
+            </div>
+        </div>
+    </body>
+</html>
